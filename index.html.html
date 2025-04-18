@@ -1,0 +1,208 @@
+portfolio 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grindhouse by Johnte</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap">
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --main-neon: #39ff14;
+      --dark-bg: #0a0a0a;
+      --card-bg: #111;
+      --accent: #00ffe0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Share Tech Mono', monospace;
+      background: #000;
+      background-size: cover;
+      color: var(--main-neon);
+      text-align: center;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    .dark-mode {
+      background: #f4f4f4;
+      color: #111;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.85);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem 2rem;
+    }
+
+    .typing {
+      border-right: 3px solid var(--main-neon);
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards, blink 0.7s infinite;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    .glitch {
+      font-size: 2rem;
+      animation: glitch 1s linear infinite;
+      color: var(--main-neon);
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 red; }
+      20% { text-shadow: -2px 0 blue; }
+      40% { text-shadow: 2px 0 green; }
+      60% { text-shadow: -2px 0 yellow; }
+      80% { text-shadow: 2px 0 purple; }
+      100% { text-shadow: -2px 0 orange; }
+    }
+
+    .bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    p {
+      max-width: 700px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .btn {
+      background-color: var(--main-neon);
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s;
+      margin-top: 15px;
+    }
+
+    .btn:hover {
+      background-color: var(--accent);
+    }
+
+    .projects {
+      margin-top: 3rem;
+      width: 100%;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      margin: 1rem auto;
+      padding: 1rem;
+      width: 85%;
+      border: 1px solid var(--main-neon);
+      border-radius: 10px;
+      box-shadow: 0 0 12px var(--main-neon);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.03);
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--main-neon);
+    }
+
+    .social-icons {
+      margin-top: 0.5rem;
+    }
+
+    .social-icons a {
+      color: var(--main-neon);
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop class="bg-video">
+    <source src="https://www.videvo.net/videvo_files/converted/2015_08/preview/Matrix_0001.mp429360.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="overlay">
+    <div class="glitch">Welcome to Grindhouse by Johnte 💻</div>
+    <p>This is my digital warzone. I'm not just coding — I'm building legacies with Python, Flask, and a sharp mind. Every app here is part of the mission.</p>
+    <a href="Johnte_Muchikuri_Resume.pdf" download class="btn">📄 Download Resume</a>
+
+    <div class="projects">
+      <h2>⚡ Projects from the Lab</h2>
+
+      <div class="project-card">
+        <h3>Rental Management System</h3>
+        <p>Track rent, tenants, and reports. Flask-powered backend + slick UI. Made for landlords, built for scale.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>PesaSmarter</h3>
+        <p>Money moves smart with this budget tracker. Flask + SQLite + graphing insights for Kenya’s upcoming legends.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Weather4Farmers</h3>
+        <p>Forecast tech for farmers. Built for the village but designed like Silicon Valley.</p>
+      </div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button onclick="document.body.classList.toggle('dark-mode')" class="btn">🌓 Toggle Dark Mode</button>
+
+    <!-- Social Media Footer -->
+    <div class="footer">
+      <p>Follow me on:</p>
+      <div class="social-icons">
+        <a href="https://github.com/chiefin933" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/chiefinpaapz" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com/cyberwaves" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Easter Egg for Devs
+    console.log("Welcome developer! 👾 If you're reading this, you're already curious enough to dig deeper. DM 'console king' to get a secret badge 💻✨");
+  </script>
+</body>
+</html>
